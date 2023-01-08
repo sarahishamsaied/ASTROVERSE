@@ -1,0 +1,76 @@
+.charts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.barChartContainer {
+  border: 1px solid rgba(0, 128, 128, 0.201);
+  box-shadow: 0 18px 15px black;
+}
+.lineChartContainer {
+  border: 1px solid rgba(0, 128, 128, 0.201);
+  box-shadow: 0 18px 15px black;
+}
+.globeContainer {
+  border: 1px solid rgba(0, 128, 128, 0.201);
+  box-shadow: 0 18px 15px black;
+  width: 50%;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.list {
+  border: 1px solid rgba(0, 128, 128, 0.201);
+  box-shadow: 0 18px 15px rgba(0, 0, 0, 0.608);
+  background-color: rgba(0, 0, 0, 0.829);
+}
+
+.list ul li {
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(0, 128, 128, 0.201);
+  box-shadow: 0 18px 15px rgba(0, 0, 0, 0.608);
+  margin-left: 0;
+  padding: 20px;
+  transition: 0.2s ease-in all;
+  font-size: 1.1rem;
+}
+.list ul li:hover {
+  background-color: rgba(255, 255, 255, 0.049);
+  cursor: pointer;
+  transform: translateY(6px);
+}
+.content {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid rgba(3, 121, 121, 0.201);
+  box-shadow: 0 18px 15px rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.415);
+  padding: 30px 10px;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
+  .listItem {
+    font-size: 0.8rem;
+  }
+  .list {
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .listItem {
+    font-size: 1rem !important;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .list {
+    border: 0;
+    width: 100%;
+  }
+  .dashboard {
+    flex-direction: column;
+  }
+}

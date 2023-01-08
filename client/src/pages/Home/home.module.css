@@ -1,0 +1,106 @@
+.announcement {
+  border-radius: 5px;
+  box-shadow: 0 0 18px black;
+  padding: 30px;
+  width: 40%;
+  transition: all 0.3s ease-in-out;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.134);
+}
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 50px;
+}
+.announcement:hover {
+  box-shadow: 0 0 18px rgb(0, 0, 0);
+  background-color: rgba(240, 248, 255, 0.038);
+  border: 1px solid rgba(255, 255, 255, 0.76);
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.announcementDetails {
+  background-color: rgba(189, 189, 189, 0.027);
+  width: 50%;
+  padding: 40px;
+  z-index: 100;
+  color: white;
+  box-shadow: 0 0 18px black;
+  border: 1px solid rgba(255, 255, 255, 0.441);
+}
+.comments {
+  height: 200px;
+  overflow-y: scroll;
+  margin: 20px 0;
+}
+.username:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.commentBody {
+  padding: 20px;
+  box-shadow: 0 0 18px rgb(0, 0, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.216);
+  background-color: rgba(245, 245, 220, 0.085);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.popupContainer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.897);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.exitButton {
+  text-align: right;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: pointer;
+}
+.commentBody small {
+  color: rgba(255, 255, 255, 0.541);
+}
+.commentInput {
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.commentInput::placeholder {
+  color: rgba(255, 255, 255, 0.804);
+}
+/* .pentagon {
+  display: inline-block;
+  width: 400.5px;
+  box-sizing: border-box;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.185);
+  clip-path: polygon(100% 0, 100% 65%, 78% 100%, 0 100%, 0 0);
+  border: 1px solid turquoise;
+}
+.pentagon::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  height: 150px;
+  width: 150px;
+  clip-path: inherit;
+} */

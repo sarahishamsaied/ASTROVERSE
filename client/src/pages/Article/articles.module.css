@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+#submitButton {
+  margin-top: 20px;
+}
+.green {
+  color: rgb(0, 255, 0);
+  margin-top: 10px;
+}
+.red {
+  color: red;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.preview {
+  background-color: aliceblue;
+  color: black;
+  padding: 20px;
+  height: 50vw;
+  overflow: scroll;
+  width: 100%;
+}
+.textEditor {
+  height: 40vh;
+}
+
+.fileInput {
+  margin-bottom: 10px;
+}

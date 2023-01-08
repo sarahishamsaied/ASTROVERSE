@@ -1,0 +1,66 @@
+body {
+  position: relative;
+}
+.inputControl {
+  padding: 10px;
+  background-color: rgba(212, 209, 209, 0.044);
+  border: 1px solid rgba(255, 255, 255, 0.486);
+  border-radius: 4px;
+  color: white !important;
+  transition: all ease-in 0.1s;
+  font-weight: 300;
+
+  /* margin-left: 30px; */
+}
+.inputControl:hover {
+  border: 3px solid white;
+}
+.inputControl::placeholder {
+  color: rgba(240, 248, 255, 0.603);
+}
+.formRow {
+  display: grid;
+  grid-template-columns: auto 17rem;
+  margin-bottom: 10px;
+}
+option {
+  color: black;
+}
+.formContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+.deletePopup {
+  position: absolute;
+  top: 0%;
+  z-index: 100;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.897);
+  border-radius: 5px;
+  box-shadow: 0 0 18px black;
+  padding: 30px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 50%;
+}
+.formContainer input {
+  width: 70%;
+}
+@media screen and (min-width: 320px) and (max-width: 580px) {
+  .material-icons {
+    display: none;
+  }
+}
+.transparent {
+  background-color: black !important;
+  border: 10px solid green;
+  color: rgb(0, 0, 0);
+  height: 50vh;
+}

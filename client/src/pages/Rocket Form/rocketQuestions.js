@@ -1,0 +1,52 @@
+export const rocketQuestions = [
+  {
+    label: "Rocket Name",
+    type: "text",
+    id: "rocket_name",
+    name: "rocket_name",
+    placeholder: "Enter Rocket Name",
+  },
+  {
+    label: "Rocket Type",
+    type: "text",
+    id: "rocket_type",
+    name: "rocket_type",
+    placeholder: "Enter Rocket Type",
+    options: ["Liquid Fuel Rocket", "Solid Fuel Rocket"],
+  },
+  {
+    label: "Rocket Capacity",
+    type: "number",
+    id: "capacity",
+    name: "capacity",
+    placeholder: "Enter Rocket Capacity",
+  },
+  {
+    label: "Rocket Momentum",
+    type: "number",
+    id: "momentum",
+    name: "momentum",
+    placeholder: "Enter Rocket Momentum",
+  },
+  {
+    label: "Rocket Weight",
+    type: "number",
+    id: "weight",
+    name: "weight",
+    placeholder: "Enter Rocket Weight",
+  },
+  {
+    label: "Rocket Velocity",
+    type: "number",
+    id: "velocity",
+    name: "velocity",
+    placeholder: "Enter Rocket Velocity",
+  },
+  {
+    label: "Rocket Thrust",
+    type: "number",
+    id: "thrust",
+    name: "thrust",
+    placeholder: "Enter Rocket Thrust",
+  },
+];

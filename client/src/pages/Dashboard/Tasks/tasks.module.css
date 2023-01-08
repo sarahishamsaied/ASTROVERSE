@@ -1,0 +1,30 @@
+.tasksTable {
+  border-collapse: separate;
+  border-spacing: 10px 0;
+}
+.tasksTable th {
+  background-color: rgba(0, 0, 0, 0.207);
+  border-bottom: 1px solid rgb(0, 238, 206);
+  margin-right: 10px;
+  padding: 10px 30px;
+  border-spacing: 30px;
+  box-shadow: 0 0 18px black;
+  font-size: 1.1rem;
+}
+.tasksTable tr {
+  background-color: rgba(0, 0, 0, 0.207);
+  transition: all ease-in 0.2s;
+}
+.tasksTable td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.081);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+.tasksTable tr:hover {
+  background-color: rgba(41, 41, 41, 0.207);
+  box-shadow: 0 0 18px black;
+}
+.doneIcon:hover {
+  color: green;
+  transform: scale(1.5, 1.5);
+}

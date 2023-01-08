@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.tableContainer {
+  height: 70vh;
+  width: 100%;
+  overflow: scroll;
+}
+/* .planetsTableSection {
+    position: relative;
+  } */
+.planetsTable {
+  border-collapse: separate;
+  border-spacing: 10px 0;
+}
+.planetsTable th {
+  background-color: rgba(0, 0, 0, 0.207);
+  border-bottom: 1px solid rgb(0, 238, 206);
+  margin-right: 10px;
+  padding: 10px 30px;
+  border-spacing: 30px;
+  box-shadow: 0 0 18px black;
+  font-size: 1.1rem;
+}
+.planetsTable tr {
+  background-color: rgba(0, 0, 0, 0.207);
+  transition: all ease-in 0.2s;
+}
+.planetsTable td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.081);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+.planetsTable tr:hover {
+  background-color: rgba(41, 41, 41, 0.207);
+  box-shadow: 0 0 18px black;
+}
+.icon {
+  margin-right: 20px;
+  transition: ease-in 0.2s;
+}
+.delete:hover {
+  color: red;
+}
+.edit:hover {
+  color: rgb(255, 204, 0);
+}
+.details:hover {
+  color: rgb(119, 0, 255);
+}
+
+.detailsPopup p {
+  margin-bottom: 10px;
+  padding: 7px;
+  box-shadow: 0 18px 18px rgba(0, 234, 255, 0.036);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.123);
+  transition: all ease-in 0.2s;
+  font-size: 1.1rem;
+}
+.detailsPopup p:hover {
+  box-shadow: 0 18px 18px rgba(0, 234, 255, 0.207);
+  background-color: rgb(255, 145, 0);
+  border-radius: 4px;
+  border: 2px solid rgba(8, 24, 252, 0.452);
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+.detailsPopup h1 {
+  color: white;
+  font-size: 2rem;
+}
+.exitButton {
+  text-align: right;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+.formRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.modifyPopupContainer {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.897);
+  border-radius: 5px;
+  box-shadow: 0 0 18px black;
+  padding: 30px;
+  border: 1px solid turquoise;
+}
+.deletePopup {
+  position: absolute;
+  top: 50%;
+  z-index: 400;
+  left: 10%;
+  background-color: rgba(0, 0, 0, 0.897);
+  width: 50%;
+  padding: 20px;
+}
+.detailsPopup {
+  position: absolute;
+  top: 0%;
+  z-index: 100;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.897);
+  border-radius: 5px;
+  box-shadow: 0 0 18px black;
+  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid rgba(0, 208, 255, 0.264);
+}

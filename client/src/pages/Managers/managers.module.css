@@ -1,0 +1,101 @@
+.managerContainer {
+  width: 80%;
+  /* padding: 30px; */
+  position: relative;
+}
+.options {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  margin-top: 10px;
+  height: 8% !important;
+}
+.optionbutton {
+  background-color: rgba(255, 255, 255, 0.059);
+  color: white;
+  border-radius: 3px;
+  transition: all ease-in 0.2s;
+  font-weight: 400;
+  border: 0;
+  border: 2px solid rgba(133, 239, 239, 0.553);
+  padding: 10px 10px;
+  margin: 0 30px;
+}
+.optionbutton:hover {
+  background-color: rgba(1, 11, 19, 0.275);
+  border-bottom: 3px solid rgba(185, 245, 245, 0.553);
+  transform: translateY(-6px);
+}
+/* //mobile generally    */
+@media screen and (max-width: 1199) {
+  .irns-desktop {
+    display: none;
+  }
+
+  .irns-mobile {
+    display: initial;
+  }
+}
+
+/* //here all definitions to apply globally */
+
+/* //desktop */
+@media only screen and (min-width: 1200) {
+}
+
+/* //tablet landscape */
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
+  .optionButton {
+    width: 70%;
+  }
+  .options {
+    justify-content: center;
+    height: 30%;
+  }
+}
+
+/* //tablet portrait */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .options {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .options button {
+    margin-bottom: 20px;
+  }
+  .optionsButton {
+    font-size: 0.5rem !important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .options {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .managerContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+  }
+  .options button {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .optionbutton {
+    font-size: 0.8rem !important;
+    width: 100%;
+    margin: 0;
+  }
+  .header {
+    font-size: 1.1rem;
+  }
+}
