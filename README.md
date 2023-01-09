@@ -74,6 +74,18 @@
               
               CLOUDINARY_API_SECRET = ""
 
- ## Architecture
+## Image Deployment Diagram
   ![diagram drawio](https://user-images.githubusercontent.com/71923204/210472229-0385dba0-4fd3-460c-bdca-719c5b7c2696.png)
+  
+## Relational Mapping
+  [mapping (1) (1).pdf](https://github.com/sarahishamsaied/ASTROVERSE/files/10376345/mapping.1.1.pdf)
+
+# Features and Sample Runs
+
+## 1 - Authentication 
+   ### 1 - Admin Login
+        ### 2 - User Login
+    
+  
+  
 
