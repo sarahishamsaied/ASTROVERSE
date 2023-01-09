@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { register } from "../../features/users/userSlice";
 import reducer from "./signup.reducer";
 import useUsers from "../../hooks/useUsers";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const initialState = {
   email: "",
   password: "",
@@ -129,7 +129,7 @@ export default function Signup() {
           name="password"
         />
 
-        <label htmlFor="">Confirm Password</label>
+        {/* <label htmlFor="">Confirm Password</label>
         <input
           onChange={(e) =>
             dispatchReducer({
@@ -142,10 +142,16 @@ export default function Signup() {
           className="inputControl"
           placeholder="Confirm Password"
           name="password"
-        />
+        /> */}
         <Button onClick={handleSignUp} className={style.signInButton}>
           Sign Up
         </Button>
+        <Link
+          to="/users/auth/login"
+          style={{ color: "turquoise", marginTop: "12px" }}
+        >
+          Already have an account? Login
+        </Link>
         <p>{reducerState.loading && "Loading..."}</p>
         <p>{reducerState.error && reducerState.error}</p>
         <p>{reducerState.data && "Success"}</p>

@@ -16,7 +16,6 @@ export default function UserHomePage() {
         <p className={style.neilArmstrong}>
           <i>-Neil Armstrong</i>
         </p>
-        <Button>EXPLORE</Button>
       </div>
       <div className={style.globeContainer}>
         <MyGlobe

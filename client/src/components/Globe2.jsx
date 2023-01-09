@@ -1,13 +1,14 @@
 import Globe from "react-globe.gl";
 // import arcsData from "./data";
 import { useRef, useState, useEffect } from "react";
-import { Button } from "arwes";
+import { Blockquote, Button } from "arwes";
 import Popup from "./Popup";
+import { Text } from "@arwes/core";
 export default function Globe2({ landingData, width, height, globeImageUrl }) {
   const [showPopup, setShowPopup] = useState(false);
-  const [latitdue, setLatitude] = useState(0);
-  const [longitude, setLongitude] = useState(-800);
-  const [duration, setDuration] = useState(10000);
+  const [latitdue, setLatitude] = useState(-5.6);
+  const [longitude, setLongitude] = useState(800);
+  const [duration, setDuration] = useState(5000);
 
   console.log(landingData);
   const globeEl = useRef();
@@ -45,7 +46,20 @@ export default function Globe2({ landingData, width, height, globeImageUrl }) {
       >
         ARC SHOT
       </Button>
-      <Button onClick={() => setShowPopup(!showPopup)}>Camera Settings</Button>
+      <Blockquote>
+        <Text
+          style={{ position: "absolute", top: "15%", zIndex: 100, right: "2%" }}
+        >
+          lat:{latitdue} lng: {longitude}
+        </Text>
+      </Blockquote>
+
+      <Button
+        style={{ position: "absolute", top: "10%", zIndex: 100, right: "10%" }}
+        onClick={() => setShowPopup(!showPopup)}
+      >
+        Camera Settings
+      </Button>
       {showPopup && (
         <Popup
           setDuration={setDuration}
@@ -80,7 +94,7 @@ export default function Globe2({ landingData, width, height, globeImageUrl }) {
         // bars
         hexBinPointsData={landingData}
         hexBinPointWeight="size"
-        hexAltitude={0.7}
+        hexAltitude={0.2}
         hexBinResolution={4}
         hexBinMerge={true}
         enablePointerInteraction={false}

@@ -16,7 +16,7 @@ export default function ManagePlanets() {
   };
   return (
     <div className={styles.managerContainer}>
-      <Header>Manage Rockets</Header>
+      <Header>Manage Planets</Header>
       <div className={styles.options}>
         <button
           name="viewAllPlanets"
@@ -27,7 +27,7 @@ export default function ManagePlanets() {
         </button>
         <button
           name="addPlanet"
-          onClick={() => navigate("/rocketform")}
+          onClick={() => navigate("/planetsform")}
           className={styles.optionbutton}
         >
           Add Planet

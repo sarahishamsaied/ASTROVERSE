@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.tableContainer {
+  height: 70vh;
+  width: 100%;
+  overflow: scroll;
+}
+/* .rocketsTableSection {
+    position: relative;
+  } */
+.rocketsTable {
+  border-collapse: separate;
+  border-spacing: 10px 0;
+}
+.rocketsTable th {
+  background-color: rgba(0, 0, 0, 0.207);
+  border-bottom: 1px solid rgb(0, 238, 206);
+  margin-right: 10px;
+  padding: 10px 30px;
+  border-spacing: 30px;
+  box-shadow: 0 0 18px black;
+  font-size: 1.1rem;
+}
+.rocketsTable tr {
+  background-color: rgba(0, 0, 0, 0.207);
+  transition: all ease-in 0.2s;
+}
+.rocketsTable td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.081);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+.rocketsTable tr:hover {
+  background-color: rgba(41, 41, 41, 0.207);
+  box-shadow: 0 0 18px black;
+}
+.icon {
+  margin-right: 20px;
+  transition: ease-in 0.2s;
+}
+.satellite {
+  color: aqua !important;
+}
+.delete:hover {
+  color: red;
+}
+.edit:hover {
+  color: rgb(255, 204, 0);
+}
+.details:hover {
+  color: rgb(119, 0, 255);
+}
+
+.detailsPopup p {
+  margin-bottom: 10px;
+  padding: 4px 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.163);
+}
+.detailsPopup p:hover {
+  background-color: rgba(29, 29, 29, 0.707);
+}
+.detailsPopup h1 {
+  color: white;
+  font-size: 2rem;
+}
+.exitButton {
+  text-align: right;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: pointer;
+}
+.formRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.modifyPopupContainer {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.897);
+  border-radius: 5px;
+  box-shadow: 0 0 18px black;
+  padding: 30px;
+  border: 1px solid turquoise;
+}
+.deletePopup {
+  position: absolute;
+  top: 50%;
+  z-index: 400;
+  left: 10%;
+  background-color: rgba(0, 0, 0, 0.897);
+  width: 50%;
+  padding: 20px;
+}
+.detailsPopup {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.897);
+  border-radius: 5px;
+  box-shadow: 0 0 18px black;
+  padding: 30px;
+}

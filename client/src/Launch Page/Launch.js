@@ -9,6 +9,7 @@ import crew from "./crew";
 import CrewPopup from "./CrewPopup";
 import * as AiIcons from "react-icons/ai";
 const Launch = (props) => {
+  console.log(props.planets);
   const today = new Date().toISOString().split("T")[0];
   const [selectedCrew, setSelectedCrew] = useState([]);
   const [missionName, setMissionName] = useState("");
@@ -36,7 +37,15 @@ const Launch = (props) => {
         {rocket.rocket_name}
       </option>
     ));
-  }, [props.rockets]);
+  }, [props]);
+  const planetsBody = useMemo(() => {
+    console.log(props);
+    return props.planets?.map((planet) => (
+      <option value={planet.id} key={planet.id}>
+        {planet.planet_name}
+      </option>
+    ));
+  }, [props]);
   const adminsBody = useMemo(() => {
     return props.admins?.map((admin) => (
       <option value={admin.id} key={admin.id}>
@@ -65,7 +74,7 @@ const Launch = (props) => {
         admin_id: adminId,
       };
       const response = await props.submitLaunch(launchData);
-      setMessage("Mssion Requested Successfully");
+      setMessage("Mission Requested Successfully");
     } catch (error) {
       console.log(error);
       setMessage("An error occurred");
@@ -161,7 +170,7 @@ const Launch = (props) => {
             className="inputControl"
             onChange={(e) => setselectedPlanetId(e.target.value)}
           >
-            {selectorBody}
+            {planetsBody}
           </select>
           <Blockquote className={style.formLabel}>Crew</Blockquote>
           <button

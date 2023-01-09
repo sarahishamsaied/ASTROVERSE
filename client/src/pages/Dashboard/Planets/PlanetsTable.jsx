@@ -7,9 +7,12 @@ import usePlanets from "../../../hooks/usePlanets";
 import DeletePopUp from "../Rockets/DeletePopUp";
 import ModifyPopUp from "../Rockets/ModifyPopup";
 import PlanetDetails from "./PlanetDetails";
+import * as FiIcons from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 export default function PlanetsTable() {
   const [searchValue, setSearchValue] = React.useState([]);
   const { getPlanets, deletePlanet } = usePlanets();
+  const navigate = useNavigate();
   const [planets, setPlanets] = React.useState([]);
   const [deletePopup, setDeletePopup] = React.useState(false);
   const [deleteRecord, setDeleteRecord] = React.useState({});
@@ -82,6 +85,10 @@ export default function PlanetsTable() {
                           setSelectedPlanet(planet);
                         }}
                         className={`${style.icon} ${style.delete}`}
+                      />
+                      <FiIcons.FiEye
+                        onClick={() => navigate(`/planets/view/${planet.id}`)}
+                        className={`${style.icon} ${style.satellite}`}
                       />
                     </td>
                     <td>{planet.planet_name}</td>

@@ -4,7 +4,7 @@ import style from "./rocketstable.module.css";
 
 export default function RocketDetails({ rocket, setDetailsPopup }) {
   return (
-    <Frame className={style.detailsPopup}>
+    <section className={style.detailsPopup}>
       <button
         onClick={() => setDetailsPopup(false)}
         className={style.exitButton}
@@ -21,6 +21,6 @@ export default function RocketDetails({ rocket, setDetailsPopup }) {
       <p>Velocity: {rocket.velocity}</p>
       <p>Type: {rocket.rocket_type}</p>
       <p>Added At: {rocket.createdAt}</p>
-    </Frame>
+    </section>
   );
 }

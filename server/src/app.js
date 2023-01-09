@@ -3,29 +3,11 @@ const express = require("express");
 const db = require("../models/index");
 const cors = require("cors");
 
-// const build = async () => {
-//   console.log("articles here");
-//   const res = await db.rockets.create({
-//     rocket_name: "habala",
-//     weight: 3,
-//     capacity: 3,
-//     rocket_type: "liquid",
-//     thrust: 3,
-//     fuel: "liquid",
-//     velocity: 3,
-//     mass: 3,
-//     momentum: 3,
-//   });
-//   console.log("find");
-//   const res2 = await db.rockets.findOne({ where: { id: 8000 } });
-//   console.log(res2);
-// };
 db.sequelize.sync({ force: false }).then(function () {
   app.listen(process.env.DB_PORT, function () {
     console.log("server is successfully running!");
   });
 });
-// build();
 const planetsRouter = require("./routes/planets/planets.router");
 const rocketRouter = require("./routes/rockets/rockets.router");
 const missionRouter = require("./routes/missions/missions.router");

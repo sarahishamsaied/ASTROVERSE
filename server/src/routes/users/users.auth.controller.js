@@ -51,8 +51,7 @@ const checkEmailExists = async (email) => {
 };
 const signin = async (req, res) => {
   try {
-    res.header("Access-Control-Allow-Credentials", true);
-
+    // res.header("Access-Control-Allow-Credentials", true);
     const { email, password } = req.body;
     const user = await users.findOne({
       where: {

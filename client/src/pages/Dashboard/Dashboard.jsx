@@ -12,6 +12,7 @@ import ManageMaintenancePage from "../Managers/ManageMaintenancePage";
 import ManageRocket from "../Managers/ManageRocket";
 import LineChart from "./LineChart";
 import ManagePlanets from "../Managers/ManagePlanets";
+import ManageAccount from "./Account/ManageAccount";
 
 export default function Dashboard() {
   const [chosenPage, setChosenPage] = useState("general");
@@ -23,6 +24,7 @@ export default function Dashboard() {
     maintenancesPage: <ManageMaintenancePage />,
     manageRocketPage: <ManageRocket />,
     managePlanetsPage: <ManagePlanets />,
+    manageAccountPage: <ManageAccount />,
   };
   return (
     <section className={styles.dashboard}>

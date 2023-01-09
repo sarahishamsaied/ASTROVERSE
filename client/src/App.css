@@ -53,14 +53,12 @@ option {
 .formContainer input {
   width: 70%;
 }
-@media screen and (min-width: 320px) and (max-width: 580px) {
-  .material-icons {
+@media screen and (max-width: 720px) {
+  section,
+  div {
     display: none;
   }
-}
-.transparent {
-  background-color: black !important;
-  border: 10px solid green;
-  color: rgb(0, 0, 0);
-  height: 50vh;
+  * {
+    background-color: red;
+  }
 }

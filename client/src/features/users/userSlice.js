@@ -16,6 +16,10 @@ const userSlice = createSlice({
       state.email = action.payload.email;
       state.password = action.payload.password;
       state.isAuthenticated = true;
+      state.authority_level = action.payload.authority_level;
+      state.first_name = action.payload.first_name;
+      state.last_name = action.payload.last_name;
+      state.age = action.payload.age;
     },
     logout: (state, action) => {
       state.email = "";

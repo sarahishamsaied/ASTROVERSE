@@ -10,6 +10,7 @@ import AddArticle from "./Article/AddArticle";
 import Home from "./Home/Home";
 import PlanetView from "../User Pages/Planets/PlanetView";
 import ProtectedRoute from "../components/ProtectedRoute";
+import AdminGuard from "../components/AdminGuard";
 const {
   usePlanets,
   useLaunches,
@@ -97,7 +98,7 @@ const AppLayout = (props) => {
                 element={
                   <Launch
                     entered={anim.entered}
-                    planets={planets.data}
+                    planets={planets}
                     submitLaunch={submitLaunch}
                     isPendingLaunch={isPendingLaunch}
                     rockets={rockets}
@@ -110,14 +111,16 @@ const AppLayout = (props) => {
                 path="/launch"
                 element={
                   <ProtectedRoute>
-                    <Launch
-                      entered={anim.entered}
-                      planets={planets.data}
-                      submitLaunch={submitLaunch}
-                      isPendingLaunch={isPendingLaunch}
-                      rockets={rockets}
-                      admins={admins}
-                    />
+                    <AdminGuard>
+                      <Launch
+                        entered={anim.entered}
+                        planets={planets}
+                        submitLaunch={submitLaunch}
+                        isPendingLaunch={isPendingLaunch}
+                        rockets={rockets}
+                        admins={admins}
+                      />
+                    </AdminGuard>
                   </ProtectedRoute>
                 }
               />
@@ -150,7 +153,9 @@ const AppLayout = (props) => {
                 path="/home"
                 element={
                   <ProtectedRoute>
-                    <Home />
+                    <AdminGuard>
+                      <Home />
+                    </AdminGuard>
                   </ProtectedRoute>
                 }
               />
@@ -168,7 +173,9 @@ const AppLayout = (props) => {
                 path="/planetsform"
                 element={
                   <ProtectedRoute>
-                    <PlanetForm onClickSound={onGhadaShehataSound} />
+                    <AdminGuard>
+                      <PlanetForm onClickSound={onGhadaShehataSound} />
+                    </AdminGuard>
                   </ProtectedRoute>
                 }
               />
@@ -187,19 +194,13 @@ const AppLayout = (props) => {
                 path="/dashboard"
                 element={
                   <ProtectedRoute>
-                    <Dashboard rockets={rockets} />
+                    <AdminGuard>
+                      <Dashboard rockets={rockets} />
+                    </AdminGuard>
                   </ProtectedRoute>
                 }
               />
-              <Route
-                exact
-                path="/admin/auth/login"
-                element={
-                  <ProtectedRoute>
-                    <AdminLogin />
-                  </ProtectedRoute>
-                }
-              />
+              <Route exact path="/admin/auth/login" element={<AdminLogin />} />
               <Route exact path="/users/home" element={<UserHomePage />} />
               <Route
                 exact
@@ -225,7 +226,9 @@ const AppLayout = (props) => {
                 entered={anim.entered}
                 element={
                   <ProtectedRoute>
-                    <RocketForm />
+                    <AdminGuard>
+                      <RocketForm />
+                    </AdminGuard>
                   </ProtectedRoute>
                 }
               />
@@ -247,7 +250,9 @@ const AppLayout = (props) => {
                 entered={anim.entered}
                 element={
                   <ProtectedRoute>
-                    <AddArticle />
+                    <AdminGuard>
+                      <AddArticle />
+                    </AdminGuard>
                   </ProtectedRoute>
                 }
                 submitArticle={submitArticle}
@@ -258,7 +263,9 @@ const AppLayout = (props) => {
                 entered={anim.entered}
                 element={
                   <ProtectedRoute>
-                    <PlanetView />
+                    <AdminGuard>
+                      <PlanetView />
+                    </AdminGuard>
                   </ProtectedRoute>
                 }
                 submitArticle={submitArticle}
