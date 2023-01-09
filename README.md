@@ -10,9 +10,7 @@
     - ***Frontend***: ReactJs.
     - ***Backend***: NodeJs + express.js.
     - ***Database***: PostgreSql.
-    - ***Migrations***: db-migrate.
-    - ***Database Deployment***: Google Cloud.
-    - ***Frontend Deployment***: Heroku.
+    - ***Migrations***: sequelize.
     
     
     ### Check Documentation
