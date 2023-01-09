@@ -39,13 +39,18 @@
       
       npm start
       
-     ### How to run migrations
+### How to run migrations
      
+### RUN SQL QUERY
+     
+      CREATE DATABASE astroverse-dev
+            
+### Open terminal
      
       npm run migrate-up
 
       
-     ### Environment Variables
+ ### Environment Variables
      
      - Create a .env file in `server` folder
      
