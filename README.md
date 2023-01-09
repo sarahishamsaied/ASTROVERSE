@@ -11,6 +11,7 @@
     - ***Backend***: NodeJs + express.js.
     - ***Database***: PostgreSql.
     - ***Migrations***: sequelize.
+    - ***Image Deployment***: Cloundinary
     
     
     ### Check Documentation
@@ -61,11 +62,17 @@
 
               DB= "yourdbname"
 
-              PORT = 
+              PORT = ""
 
-              DB_PORT = 
+              DB_PORT = ""
 
               TOKEN_SECRET = "yoursecretkey"
+              
+              CLOUDINARY_CLOUD_NAME = ""
+              
+              CLOUDINARY_API_KEY = ""
+              
+              CLOUDINARY_API_SECRET = ""
 
  ## Architecture
   ![diagram drawio](https://user-images.githubusercontent.com/71923204/210472229-0385dba0-4fd3-460c-bdca-719c5b7c2696.png)
