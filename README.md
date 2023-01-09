@@ -80,12 +80,5 @@
 ## Relational Mapping
   [mapping (1) (1).pdf](https://github.com/sarahishamsaied/ASTROVERSE/files/10376345/mapping.1.1.pdf)
 
-# Features and Sample Runs
 
-## 1 - Authentication 
-   ### 1 - Admin Login
-        ### 2 - User Login
-    
-  
-  
 
